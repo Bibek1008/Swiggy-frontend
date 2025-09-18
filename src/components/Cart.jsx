@@ -109,19 +109,20 @@ function Cart() {
                                 description = "",
                                 imageId,
                             },
+                            index
                         ) => {
                             // const [isMore, setIsMore] = useState(false);
 
                             let trimDes = description.substring(0, 138) + "...";
                             return (
                                 <>
-                                    <div key={imageId} className="flex w-full my-5 justify-between min-h-[182px]">
+                                    <div key={index} className="flex w-full my-5 justify-between min-h-[182px]">
                                         <div className="w-[55%] md:w-[70%]">
                                             <img
                                                 className="w-5 rounded-sm"
                                                 src={itemAttribute && itemAttribute.vegClassifier == "VEG" ? veg : nonVeg}
                                                 alt=""
-                                                srcset=""
+                                                srcSet=""
                                             />
                                             <h2 className="font-bold text-lg">
                                                 {name}

@@ -27,7 +27,7 @@ function SigninBtn() {
             // Demo login for testing purposes
             const demoUserData = {
                 name: "Demo User",
-                photo: "https://via.placeholder.com/40x40?text=DU",
+                photo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiM2MzY2RjEiLz4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EVTwvdGV4dD4KPC9zdmc+",
             };
             dispatch(addUserData(demoUserData));
             dispatch(toggleLogin())
