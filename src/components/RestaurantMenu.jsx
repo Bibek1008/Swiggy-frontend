@@ -62,13 +62,13 @@ function RestaurantMenu() {
         // console.log(res);
 
         setTopPicksData(
-            (actualMenu?.groupedCard?.cardGroupMap?.REGULAR?.cards).filter(
+            (actualMenu?.groupedCard?.cardGroupMap?.REGULAR?.cards || []).filter(
                 (data) => data.card.card.title == "Top Picks"
             )[0]
         );
 
         setMenuData(
-            actualMenu?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+            (actualMenu?.groupedCard?.cardGroupMap?.REGULAR?.cards || []).filter(
                 (data) =>
                     data?.card?.card?.itemCards || data?.card?.card?.categories
             )

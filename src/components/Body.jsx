@@ -14,7 +14,7 @@ function Body() {
     const filterVal = useSelector((state) => state?.filterSlice?.filterVal);
 
 
-    const filteredData = topRestaurantData.filter((item) => {
+    const filteredData = (topRestaurantData || []).filter((item) => {
         if (!filterVal) return true;
 
         switch (filterVal) {

@@ -75,7 +75,7 @@ function Search() {
         );
         let res = await data.json();      
         console.log(res)
-        let finalData = (res?.data?.cards.find(data => data?.groupedCard).groupedCard?.cardGroupMap?.DISH?.cards).filter(
+        let finalData = (res?.data?.cards.find(data => data?.groupedCard)?.groupedCard?.cardGroupMap?.DISH?.cards || []).filter(
             (data) => data?.card?.card?.["@type"].includes("food.v2.Dish")
         ); 
 
@@ -90,7 +90,7 @@ function Search() {
             `https://cors-by-codethread-for-swiggy.vercel.app/cors/dapi/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=4836a39e-ca12-654d-dc3b-2af9d645f8d7&submitAction=ENTER&queryUniqueId=7abdce29-5ac6-7673-9156-3022b0e032f0&selectedPLTab=RESTAURANT`
         );
         let res = await data.json();
-        const finalData = (res?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards).filter(
+        const finalData = (res?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards || []).filter(
             (data) => data?.card?.card?.info
         );
         setRestaurantData(finalData);
